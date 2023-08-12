@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="1dda6ea62f203110db1e5d8b2799b65f" extends="task" label="Loaner Request" max_length="40" name="x_890617_loaner_re_loaner_request" type="collection"/>
+    <element db_object_id="1dda6ea62f203110db1e5d8b2799b65f" extends="task" label="Loaner Request" max_length="40" name="x_890617_loaner_re_loaner_request" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="depot" max_length="40" name="u_depot" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Descrption" max_length="40" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="End date" max_length="40" name="u_end_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Item Type" max_length="40" name="u_item_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Location to used" max_length="40" name="u_location_to_used" type="string"/>
+        <element attributes="encode_utf8=false" label="Requested for" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Short description" max_length="40" name="u_short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" max_length="40" name="u_start_date" type="glide_date_time"/>
+    </element>
 </database>
